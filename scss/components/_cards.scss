@@ -1,0 +1,16 @@
+.pet-card,
+.product-card,
+.vet-card {
+  @include card;
+  overflow: hidden;
+  transition: .2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.card-body {
+  padding: 20px 24px;
+}
+

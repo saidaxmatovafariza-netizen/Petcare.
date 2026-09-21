@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Do'kon — PetCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="logo" href="index.html"
+        ><i class="fa-solid fa-paw" aria-hidden="true"></i>
+        <span>PetCare</span></a
+      >
+      <nav>
+        <a href="index.html">Bosh sahifa</a><a href="vets.html">Veterinarlar</a
+        ><a class="active" href="shop.html">Do'kon</a
+        ><a href="pets.html">Hayvonlarim</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-icon" id="bell">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i></button
+        ><a class="nav-icon" href="cart.html"
+          ><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i
+          ><b id="cartCount">0</b></a
+        ><a class="avatar" href="profile.html">AK</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="top container-fluid">
+        <div class="crumb">
+          <a href="index.html">Bosh sahifa</a><span>›</span><b>Do'kon</b>
+        </div>
+        <h1>Uy hayvonlari do'koni</h1>
+        <p class="subtitle">
+          Sevimli hayvonlaringiz uchun kerakli mahsulotlarni toping
+        </p>
+
+        <!-- VETERINARLARNIKIGA O'XSHAGAN QIDIRUV -->
+        <div class="search-row">
+          <div class="search">
+            <span>⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Mahsulot nomi bo'yicha qidirish..."
+            />
+          </div>
+          <button class="search-btn" id="searchBtn">Qidirish</button>
+        </div>
+      </section>
+
+      <section class="shop-area container-fluid">
+        <div class="filters">
+          <div>
+            <label>Kategoriya</label>
+            <div class="chips" id="cats">
+              <button class="chip active" data-cat="all">Barchasi</button
+              ><button class="chip" data-cat="Yem">Yem</button
+              ><button class="chip" data-cat="O'yinchoq">O'yinchoq</button
+              ><button class="chip" data-cat="Dori">Dori</button
+              ><button class="chip" data-cat="Parvarish">Parvarish</button>
+            </div>
+          </div>
+          <div>
+            <label>Hayvon</label
+            ><select id="animal">
+              <option value="all">Barchasi</option>
+              <option value="Itlar">Itlar</option>
+              <option value="Mushuklar">Mushuklar</option>
+              <option value="Qushlar">Qushlar</option>
+            </select>
+          </div>
+          <div class="found">🛍 <b id="count">6</b> ta topildi</div>
+        </div>
+
+        <div class="products row g-4" id="products">
+          <article
+            class="product col-12 col-sm-6 col-lg-4"
+            data-name="Royal Canin Medium Adult"
+            data-cat="Yem"
+            data-animal="Itlar"
+          >
+            <div class="p-img">
+              <div class="fake-img dog">
+                <i class="fa-solid fa-dog" aria-hidden="true"></i>
+              </div>
+              <span>-19%</span><button class="heart">♡</button>
+            </div>
+            <div class="p-body">
+              <small>Yem</small>
+              <h2>Royal Canin Medium Adult</h2>
+              <p>★★★★★ <em>(234)</em></p>
+              <div>
+                <b>89 000 so'm</b
+                ><button class="cart" data-product="Royal Canin Medium Adult">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  Savat
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product col-12 col-sm-6 col-lg-4"
+            data-name="Whiskas Tuna & Salmon"
+            data-cat="Yem"
+            data-animal="Mushuklar"
+          >
+            <div class="p-img">
+              <div class="fake-img cat">
+                <i class="fa-solid fa-cat" aria-hidden="true"></i>
+              </div>
+              <button class="heart">♡</button>
+            </div>
+            <div class="p-body">
+              <small>Yem</small>
+              <h2>Whiskas Tuna & Salmon</h2>
+              <p>★★★★★ <em>(156)</em></p>
+              <div>
+                <b>45 000 so'm</b
+                ><button class="cart" data-product="Whiskas Tuna & Salmon">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  Savat
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product col-12 col-sm-6 col-lg-4"
+            data-name="Kong Classic O'yinchoq"
+            data-cat="O'yinchoq"
+            data-animal="Itlar"
+          >
+            <div class="p-img">
+              <div class="fake-img toy">
+                <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+              </div>
+              <span>-17%</span><button class="heart">♡</button>
+            </div>
+            <div class="p-body">
+              <small>O'yinchoq</small>
+              <h2>Kong Classic O'yinchoq</h2>
+              <p>★★★★★ <em>(312)</em></p>
+              <div>
+                <b>35 000 so'm</b
+                ><button class="cart" data-product="Kong Classic O'yinchoq">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  Savat
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product col-12 col-sm-6 col-lg-4"
+            data-name="Frontline Plus (3 ta)"
+            data-cat="Dori"
+            data-animal="Itlar"
+          >
+            <div class="p-img">
+              <div class="fake-img med">
+                <i class="fa-solid fa-pills" aria-hidden="true"></i>
+              </div>
+              <button class="heart">♡</button>
+            </div>
+            <div class="p-body">
+              <small>Dori</small>
+              <h2>Frontline Plus (3 ta)</h2>
+              <p>★★★★★ <em>(89)</em></p>
+              <div>
+                <b>120 000 so'm</b
+                ><button class="cart" data-product="Frontline Plus (3 ta)">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  Savat
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product col-12 col-sm-6 col-lg-4"
+            data-name="Trixie Shampun"
+            data-cat="Parvarish"
+            data-animal="Mushuklar"
+          >
+            <div class="p-img">
+              <div class="fake-img care">
+                <i class="fa-solid fa-pump-soap" aria-hidden="true"></i>
+              </div>
+              <button class="heart">♡</button>
+            </div>
+            <div class="p-body">
+              <small>Parvarish</small>
+              <h2>Trixie Shampun</h2>
+              <p>★★★★★ <em>(74)</em></p>
+              <div>
+                <b>55 000 so'm</b
+                ><button class="cart" data-product="Trixie Shampun">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  Savat
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product col-12 col-sm-6 col-lg-4"
+            data-name="Vitakraft Qushlar yemi"
+            data-cat="Yem"
+            data-animal="Qushlar"
+          >
+            <div class="p-img">
+              <div class="fake-img bird">
+                <i class="fa-solid fa-dove" aria-hidden="true"></i>
+              </div>
+              <button class="heart">♡</button>
+            </div>
+            <div class="p-body">
+              <small>Yem</small>
+              <h2>Vitakraft Qushlar yemi</h2>
+              <p>★★★★★ <em>(61)</em></p>
+              <div>
+                <b>38 000 so'm</b
+                ><button class="cart" data-product="Vitakraft Qushlar yemi">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  Savat
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div id="empty" class="empty">Mos mahsulot topilmadi.</div>
+      </section>
+    </main>
+    <div id="toast" class="toast"></div>
+    <script>
+      let cat = "all",
+        cart = JSON.parse(localStorage.getItem("petcareCart") || "[]").reduce(
+          (n, p) => n + p.qty,
+          0,
+        );
+      document.getElementById("cartCount").textContent = cart;
+      const products = [...document.querySelectorAll(".product")],
+        search = document.getElementById("search"),
+        animal = document.getElementById("animal");
+      function filter() {
+        const q = search.value.toLowerCase().trim(),
+          a = animal.value;
+        let n = 0;
+        products.forEach((p) => {
+          const ok =
+            p.dataset.name.toLowerCase().includes(q) &&
+            (cat === "all" || p.dataset.cat === cat) &&
+            (a === "all" || p.dataset.animal === a);
+          p.style.display = ok ? "" : "none";
+          if (ok) n++;
+        });
+        document.getElementById("count").textContent = n;
+        document.getElementById("empty").style.display = n ? "none" : "block";
+      }
+      document.getElementById("searchBtn").onclick = filter;
+      search.addEventListener("input", filter);
+      animal.addEventListener("change", filter);
+      document.querySelectorAll(".chip").forEach(
+        (x) =>
+          (x.onclick = () => {
+            document
+              .querySelectorAll(".chip")
+              .forEach((y) => y.classList.remove("active"));
+            x.classList.add("active");
+            cat = x.dataset.cat;
+            filter();
+          }),
+      );
+      document.querySelectorAll(".heart").forEach(
+        (x) =>
+          (x.onclick = () => {
+            x.classList.toggle("liked");
+            x.innerHTML = x.classList.contains("liked")
+              ? '<i class="fa-solid fa-heart"></i>'
+              : '<i class="fa-regular fa-heart"></i>';
+            toast(
+              "Sevimlilarga " +
+                (x.classList.contains("liked")
+                  ? "qo‘shildi"
+                  : "olib tashlandi"),
+            );
+          }),
+      );
+      document.querySelectorAll(".cart").forEach(
+        (x) =>
+          (x.onclick = () => {
+            let items = JSON.parse(localStorage.getItem("petcareCart") || "[]");
+            let item = items.find((p) => p.name === x.dataset.product);
+            if (item) item.qty++;
+            else
+              items.push({
+                name: x.dataset.product,
+                price: {
+                  "Royal Canin Medium Adult": 89000,
+                  "Whiskas Tuna & Salmon": 45000,
+                  "Kong Classic O'yinchoq": 35000,
+                  "Frontline Plus (3 ta)": 120000,
+                  "Trixie Shampun": 55000,
+                  "Vitakraft Qushlar yemi": 38000,
+                }[x.dataset.product],
+                qty: 1,
+              });
+            localStorage.setItem("petcareCart", JSON.stringify(items));
+            cart = items.reduce((n, p) => n + p.qty, 0);
+            document.getElementById("cartCount").textContent = cart;
+            toast(
+              x.dataset.product +
+                ' savatga qo‘shildi <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>',
+            );
+          }),
+      );
+      document.getElementById("bell").onclick = () =>
+        toast("Yangi bildirishnoma yo‘q");
+      function toast(t) {
+        const x = document.getElementById("toast");
+        if (!x) return;
+        x.textContent = t;
+        x.classList.add("show");
+        setTimeout(() => x.classList.remove("show"), 1800);
+      }
+      filter();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

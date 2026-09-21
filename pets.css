@@ -1,0 +1,497 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #111329;
+  background: #fff8f6
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+.navbar {
+  height: 70px;
+  padding: 0 32px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 5
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  color: #ff674c
+}
+
+.navbar nav {
+  display: flex;
+  gap: 18px
+}
+
+.navbar nav a {
+  padding: 12px 20px;
+  border-radius: 28px;
+  color: #4d566a;
+  font-weight: 800
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  background: #ffe7e2;
+  color: #ff624a
+}
+
+.nav-actions {
+  display: flex;
+  gap: 18px;
+  align-items: center
+}
+
+.nav-icon {
+  font-size: 23px;
+  color: #4d566a
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ff704f;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 900
+}
+
+.top {
+  background: #fff;
+  padding: 35px 18px 45px;
+  border-bottom: 1px solid #eee
+}
+
+.crumb {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #657086;
+  font-size: 18px
+}
+
+.crumb span {
+  font-size: 28px
+}
+
+.top h1 {
+  font-size: 40px;
+  margin: 22px 0 7px
+}
+
+.top p {
+  color: #687388;
+  font-size: 18px
+}
+
+.pets-area {
+  padding: 35px 20px
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px
+}
+
+.head span {
+  color: #ff674c;
+  font-weight: 900;
+  font-size: 14px
+}
+
+.head h2 {
+  font-size: 32px;
+  margin-top: 4px
+}
+
+.head button,
+#save {
+  background: #ff674c;
+  color: #fff;
+  border: 0;
+  border-radius: 25px;
+  padding: 13px 22px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer
+}
+
+.pet-grid:not(.row) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px
+}
+
+.pet {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 25px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 20px #0000000d;
+  position: relative
+}
+
+.pet-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 22px;
+  background: #ffe4de;
+  display: grid;
+  place-items: center;
+  font-size: 50px
+}
+
+.pet-icon.cat {
+  background: #e7e0ff
+}
+
+.pet h3 {
+  font-size: 23px
+}
+
+.pet p {
+  color: #718096;
+  margin-top: 5px
+}
+
+.more {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  border: 0;
+  background: #f6f7f9;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px
+}
+
+.empty {
+  display: none;
+  text-align: center;
+  padding: 40px;
+  color: #778196
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #11132966;
+  place-items: center;
+  z-index: 20
+}
+
+.modal.show {
+  display: grid
+}
+
+.box {
+  width: min(430px, 90%);
+  background: #fff;
+  border-radius: 25px;
+  padding: 30px;
+  position: relative
+}
+
+.box h2 {
+  margin-bottom: 20px
+}
+
+.box input,
+.box select {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 13px;
+  padding: 0 14px;
+  font: inherit
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  color: #687388;
+  cursor: pointer
+}
+
+@media(max-width:700px) {
+  .navbar nav {
+    display: none
+  }
+
+  .navbar {
+    padding: 0 15px
+  }
+
+  .pet-grid {
+    grid-template-columns: 1fr
+  }
+
+  .head {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column
+  }
+}
+
+/* Bootstrap 5 + responsive helper layer */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Bootstrap-like responsive navigation on small screens */
+@media (max-width: 991.98px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 70px;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 0 4px;
+  }
+
+  .navbar nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-photo {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    padding: 9px 14px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 9vw, 46px);
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 18px 28px;
+  }
+
+  .section,
+  .types {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .head h2 {
+    font-size: 30px;
+  }
+
+  .cta {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 30px 22px;
+  }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .float.top {
+    right: 5px;
+    top: -12px;
+  }
+
+  .float.bottom {
+    left: 5px;
+    bottom: -12px;
+  }
+
+  .filter-row,
+  .filters {
+    width: 100%;
+  }
+
+  .cards,
+  .products,
+  .pet-grid {
+    width: 100%;
+  }
+
+  .doctor {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor img {
+    min-height: 280px;
+    max-height: 380px;
+  }
+
+  .info {
+    padding: 25px 20px;
+  }
+
+  .info h1 {
+    font-size: 30px;
+  }
+
+  .cart-item,
+  .summary {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .checkout {
+    width: 100%;
+  }
+
+  footer div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  footer a {
+    margin: 0 6px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-row {
+    width: 100%;
+  }
+
+  .search,
+  .search-btn {
+    height: 54px;
+  }
+
+  .products,
+  .cards,
+  .vets,
+  .services {
+    grid-template-columns: 1fr !important;
+  }
+
+  .p-img {
+    height: 210px;
+  }
+
+  .photo {
+    height: 230px;
+  }
+
+  .pet {
+    padding: 18px;
+  }
+
+  .pet-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 38px;
+    flex: 0 0 70px;
+  }
+
+  .page h1,
+  .top h1 {
+    font-size: 32px;
+  }
+}
+
+/* Kartalar orasini ochish (Bootstrap col ziddiyati bartaraf etilgan) — asl 2 ustunli dizayn saqlandi */
+.pet-grid.row {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 22px !important
+}
+
+.pet-grid.row>.pet {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  margin: 0 !important
+}
+
+@media(max-width:700px) {
+  .pet-grid.row {
+    grid-template-columns: 1fr !important
+  }
+}

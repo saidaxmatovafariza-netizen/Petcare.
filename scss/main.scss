@@ -1,0 +1,34 @@
+
+
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+
+@import 'vendors/bootstrap';
+
+
+@import 'base/reset';
+@import 'base/typography';
+
+
+@import 'components/buttons';
+@import 'components/navbar';
+@import 'components/cards';
+@import 'components/forms';
+
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/sections';
+
+
+@import 'pages/home';
+@import 'pages/pets';
+@import 'pages/shop';
+@import 'pages/vets';
+@import 'pages/auth';
+@import 'pages/details';
+
+@import 'themes/default';

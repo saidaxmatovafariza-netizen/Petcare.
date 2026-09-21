@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Qabulga yozilish — PetCare</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shop.css" />
+    <style>
+      .form-wrap {
+        max-width: 700px;
+        margin: auto;
+        padding: 35px 18px;
+      }
+      .form-card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 25px;
+        padding: 30px;
+      }
+      .form-card label {
+        display: block;
+        margin: 15px 0 7px;
+        font-weight: 800;
+      }
+      .form-card input,
+      .form-card select,
+      .form-card textarea {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 14px;
+        padding: 13px;
+        font: inherit;
+      }
+      .form-card button {
+        margin-top: 20px;
+        border: 0;
+        background: #ff674c;
+        color: #fff;
+        padding: 14px 25px;
+        border-radius: 24px;
+        font-weight: 900;
+        font: inherit;
+      }
+      .success {
+        display: none;
+        background: #e3faf3;
+        color: #087f67;
+        border-radius: 15px;
+        padding: 15px;
+        margin-top: 15px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="logo" href="index.html"
+        ><i class="fa-solid fa-paw" aria-hidden="true"></i>
+        <span>PetCare</span></a
+      >
+      <nav>
+        <a href="index.html">Bosh sahifa</a><a href="vets.html">Veterinarlar</a
+        ><a href="shop.html">Do'kon</a><a href="pets.html">Hayvonlarim</a>
+      </nav>
+      <a class="avatar" href="profile.html">AK</a>
+    </header>
+    <section class="top container-fluid">
+      <div class="crumb">
+        <a href="index.html">Bosh sahifa</a><span>›</span
+        ><b>Qabulga yozilish</b>
+      </div>
+      <h1>Qabulga yozilish</h1>
+      <p class="subtitle">
+        Veterinar qabuliga o'zingizga qulay vaqtni tanlang.
+      </p>
+    </section>
+    <main class="form-wrap container">
+      <div class="form-card">
+        <label>Ismingiz</label
+        ><input id="name" placeholder="Ismingizni kiriting" /><label
+          >Veterinar</label
+        ><select id="doctor">
+          <option>Dr. Nodira Yusupova</option>
+          <option>Dr. Jasur Mirzayev</option>
+          <option>Dr. Malika Toshmatova</option>
+          <option>Dr. Bobur Xolmatov</option></select
+        ><label>Sana</label><input id="date" type="date" /><label>Vaqt</label
+        ><input id="time" type="time" /><label>Izoh</label
+        ><textarea
+          id="note"
+          rows="4"
+          placeholder="Qo'shimcha ma'lumot"
+        ></textarea
+        ><button id="submit">Qabulni tasdiqlash</button>
+        <div id="success" class="success">✓ Qabul so'rovingiz yuborildi!</div>
+      </div>
+    </main>
+    <script>
+      const nameInput = document.getElementById("name");
+      const submitBtn = document.getElementById("submit");
+      const successBox = document.getElementById("success");
+
+      submitBtn.addEventListener("click", () => {
+        if (!nameInput.value.trim()) {
+          nameInput.focus();
+          return;
+        }
+
+        successBox.style.display = "block";
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

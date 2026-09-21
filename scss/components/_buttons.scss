@@ -1,0 +1,22 @@
+.btn-pet {
+  display: inline-block;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: $radius-pill;
+  background: $primary;
+  color: $white;
+  font-weight: 900;
+  transition: .2s ease;
+
+  &:hover {
+    background: $primary-dark;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-outline-pet {
+  @extend .btn-pet;
+  background: $white;
+  color: $primary;
+  border: 1px solid $primary;
+}

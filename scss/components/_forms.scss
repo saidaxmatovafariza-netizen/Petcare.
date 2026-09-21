@@ -1,0 +1,13 @@
+.form-control-pet {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #dfe3e8;
+  border-radius: $radius-md;
+  padding: 10px 15px;
+  outline: none;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 3px #ff674c22;
+  }
+}
