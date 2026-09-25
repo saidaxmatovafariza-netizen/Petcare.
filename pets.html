@@ -16,7 +16,11 @@
   <body>
     <header class="navbar">
       <a class="logo" href="index.html"><i class="fa-solid fa-paw" aria-hidden="true"></i> <span>PetCare</span></a>
+<<<<<<< HEAD
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true"><label for="nav-toggle" class="hamburger" aria-label="Menyu"><span></span><span></span><span></span></label><nav>
+=======
+      <nav>
+>>>>>>> 5681edc987a42cbf8887ba12d4d7b3e230c101dc
         <a href="index.html">Bosh sahifa</a><a href="vets.html">Veterinarlar</a
         ><a href="shop.html">Do'kon</a
         ><a class="active" href="pets.html">Hayvonlarim</a>
@@ -83,5 +87,62 @@
         </button>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+    <script>
+      const modal = document.getElementById("modal");
+      const addBtn = document.getElementById("add");
+      const closeBtn = document.getElementById("close");
+      const saveBtn = document.getElementById("save");
+      const petGrid = document.getElementById("petGrid");
+      const petName = document.getElementById("petName");
+      const petType = document.getElementById("petType");
+      const petAge = document.getElementById("petAge");
+
+      addBtn.addEventListener("click", () => modal.classList.add("show"));
+      closeBtn.addEventListener("click", () => modal.classList.remove("show"));
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) modal.classList.remove("show");
+      });
+
+      saveBtn.addEventListener("click", () => {
+        const n = petName.value.trim();
+        const t = petType.value;
+        const a = petAge.value.trim();
+
+        if (!n) {
+          petName.focus();
+          return;
+        }
+
+        const icons = {
+          Mushuk: "<i class="fa-solid fa-cat" aria-hidden="true"></i>",
+          Qush: "<i class="fa-solid fa-dove" aria-hidden="true"></i>",
+          Quyon: "🐰",
+          Baliq: "🐟",
+          It: "<i class="fa-solid fa-dog" aria-hidden="true"></i>"
+        };
+
+        const card = document.createElement("article");
+        card.className = "pet";
+        card.innerHTML = `
+          <div class="pet-icon">${icons[t] || "<i class="fa-solid fa-dog" aria-hidden="true"></i>"}</div>
+          <div>
+            <h3>${n}</h3>
+            <p>${t} • ${a || "—"} yosh</p>
+            <p>⚕️ Sog'liq nazorati</p>
+          </div>
+          <button class="more" type="button">⋮</button>
+        `;
+
+        petGrid.appendChild(card);
+        modal.classList.remove("show");
+        petName.value = "";
+        petAge.value = "";
+      });
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> 5681edc987a42cbf8887ba12d4d7b3e230c101dc
 </body>
 </html>
