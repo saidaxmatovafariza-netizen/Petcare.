@@ -1,0 +1,16 @@
+footer {
+  padding: 45px 20px;
+  background: $text;
+  color: $white;
+  text-align: center;
+
+  .footer-logo {
+    color: $primary;
+    font-size: rem(28px);
+    font-weight: 900;
+  }
+
+  p {
+    color: #aeb5c5;
+  }
+}

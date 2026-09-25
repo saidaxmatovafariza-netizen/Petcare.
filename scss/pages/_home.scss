@@ -1,0 +1,30 @@
+.hero {
+  min-height: 650px;
+  padding: 65px 5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: linear-gradient(110deg, #fff2ef, #fffaf8 55%, #effaf8);
+
+  h1 {
+    font-size: clamp(42px, 5vw, 60px);
+    line-height: 1.05;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  p {
+    max-width: 690px;
+    color: $text-muted;
+    font-size: rem(20px);
+    line-height: 1.6;
+  }
+}
+
+@include responsive(992px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

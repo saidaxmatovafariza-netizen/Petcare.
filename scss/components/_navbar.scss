@@ -1,0 +1,66 @@
+.navbar {
+  min-height: 70px;
+  padding: 10px 32px;
+  background: $white;
+  border-bottom: 1px solid $border;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  .logo {
+    font-size: rem(25px);
+    font-weight: 900;
+    color: $primary;
+  }
+
+  nav {
+    display: flex;
+    gap: 18px;
+
+    a {
+      padding: 12px 20px;
+      border-radius: $radius-pill;
+      color: #4d566a;
+      font-weight: 800;
+
+      &:hover,
+      &.active {
+        background: #ffe7e2;
+        color: $primary;
+      }
+    }
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .avatar {
+    @include flex-center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #ff704f;
+    color: $white;
+    font-weight: 900;
+  }
+}
+
+@include responsive(992px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+
+    nav {
+      order: 3;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

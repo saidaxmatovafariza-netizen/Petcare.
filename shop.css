@@ -1,0 +1,103 @@
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Nunito',sans-serif;color:#111329;background:#fff8f6}a{text-decoration:none;color:inherit}button{font-family:inherit;cursor:pointer}.navbar{height:70px;padding:0 32px;background:#fff;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}.logo{font-size:25px;font-weight:900;color:#ff674c}.navbar nav{display:flex;gap:18px}.navbar nav a{padding:12px 20px;border-radius:28px;color:#4d566a;font-weight:800}.navbar nav a:hover,.navbar nav a.active{background:#ffe7e2;color:#ff624a}.nav-actions{display:flex;align-items:center;gap:18px}.nav-icon{font-size:23px;background:transparent;color:#4d566a;position:relative;text-decoration:none;border:0}.nav-icon b{position:absolute;right:-12px;top:-8px;background:#ff674c;color:#fff;border-radius:50%;font-size:11px;padding:3px 6px}.avatar{width:46px;height:46px;border-radius:50%;background:#ff704f;color:#fff;display:grid;place-items:center;font-weight:900}.top{background:#fff;padding:35px 18px 38px;border-bottom:1px solid #eee}.crumb{display:flex;gap:16px;align-items:center;color:#647086;font-size:18px}.crumb span{font-size:28px}.top h1{font-size:38px;margin:20px 0 5px}.subtitle{font-size:18px;color:#6d778a}.search-row{display:flex;gap:12px;margin-top:26px}.search{width:100%;max-width:720px;height:62px;border:1px solid #dfe3e8;border-radius:20px;background:#fff8f6;display:flex;align-items:center;padding:0 20px;gap:15px}.search span{font-size:32px;color:#94a0b3}.search input{border:0;outline:0;background:transparent;width:100%;font:inherit;font-size:18px}.search-btn{height:62px;padding:0 30px;border:0;border-radius:20px;background:#ff674c;color:#fff;font-size:17px;font-weight:900}.shop-area{padding:20px 18px}.filters{display:grid;grid-template-columns:1fr 220px 110px;gap:25px;align-items:end}.filters label{display:block;color:#657086;font-weight:900;margin-bottom:10px}.chips{display:flex;gap:10px;flex-wrap:wrap}.chip{padding:10px 18px;border-radius:24px;border:1px solid #dfe3e8;background:#fff;color:#4b5568;font-size:16px}.chip.active,.chip:hover{background:#ff674c;color:#fff;border-color:#ff674c}.filters select{width:100%;height:46px;border:1px solid #dfe3e8;border-radius:24px;padding:0 15px;background:#fff;font:inherit}.found{color:#6d778a;padding-bottom:10px}.products:not(.row){display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:35px}.product{background:#fff;border:1px solid #eee;border-radius:25px;overflow:hidden;box-shadow:0 8px 20px #00000010}.p-img{height:245px;position:relative;overflow:hidden}.fake-img{height:100%;display:grid;place-items:center;font-size:105px}.dog{background:#f0dcc9}.cat{background:#dfeef3}.toy{background:#f3e3cf}.med{background:#dceef5}.care{background:#e7def5}.bird{background:#dff2df}.p-img>span{position:absolute;top:14px;left:14px;background:#ff3049;color:#fff;padding:7px 12px;border-radius:16px;font-weight:900}.heart{position:absolute;right:14px;top:14px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:#94a0b0;font-size:26px;box-shadow:0 2px 7px #0002}.heart.liked{color:#ff674c}.p-body{padding:20px}.p-body small{background:#d9f7f1;color:#008e7c;padding:5px 13px;border-radius:14px;font-weight:900}.p-body h2{font-size:19px;margin:14px 0 7px}.p-body p{color:#ffac00;letter-spacing:1px}.p-body em{font-style:normal;color:#9ba5b5;letter-spacing:0}.p-body>div{display:flex;align-items:center;justify-content:space-between;margin-top:15px}.p-body b{font-size:20px;color:#ff674c}.cart{border:0;background:#ff674c;color:#fff;padding:11px 17px;border-radius:22px;font-weight:900}.empty{text-align:center;padding:60px;display:none;color:#7b8495;font-size:20px}.toast{position:fixed;right:25px;bottom:25px;background:#111329;color:#fff;padding:14px 20px;border-radius:14px;opacity:0;transform:translateY(15px);transition:.2s}.toast.show{opacity:1;transform:translateY(0)}@media(max-width:900px){.filters{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}.found{padding:0}.search{width:100%}}@media(max-width:600px){.navbar nav{display:none}.navbar{padding:0 15px}.products{grid-template-columns:1fr}.search-row{flex-direction:column}.search-btn{width:100%}}
+
+/* Bootstrap 5 + responsive helper layer */
+html, body { max-width: 100%; overflow-x: hidden; }
+img { max-width: 100%; }
+
+/* Bootstrap-like responsive navigation on small screens */
+@media (max-width: 991.98px) {
+  .navbar { flex-wrap: wrap; height: auto; min-height: 70px; padding: 10px 20px; gap: 10px; }
+  .navbar nav { order: 3; width: 100%; flex-direction: column; gap: 4px; padding: 8px 0 4px; }
+  .navbar nav a { width: 100%; text-align: center; padding: 10px 14px; }
+  .nav-actions { margin-left: auto; }
+  .hero { min-height: auto; }
+  .hero-text { width: 100%; }
+  .hero-photo { max-width: 100%; }
+}
+@media (max-width: 767.98px) {
+  .navbar { padding: 9px 14px; }
+  .logo { font-size: 22px; }
+  .nav-actions { gap: 10px; }
+  .avatar { width: 40px; height: 40px; }
+  .hero h1 { font-size: clamp(34px, 9vw, 46px); letter-spacing: -1px; }
+  .hero p { font-size: 17px; }
+  .stats { flex-wrap: wrap; gap: 18px 28px; }
+  .section, .types { padding-left: 15px; padding-right: 15px; }
+  .head h2 { font-size: 30px; }
+  .cta { margin-left: 15px; margin-right: 15px; padding: 30px 22px; }
+  .cta h2 { font-size: 28px; }
+  .float.top { right: 5px; top: -12px; }
+  .float.bottom { left: 5px; bottom: -12px; }
+  .filter-row, .filters { width: 100%; }
+  .cards, .products, .pet-grid { width: 100%; }
+  .doctor { grid-template-columns: 1fr; }
+  .doctor img { min-height: 280px; max-height: 380px; }
+  .info { padding: 25px 20px; }
+  .info h1 { font-size: 30px; }
+  .cart-item, .summary { flex-direction: column; align-items: stretch; gap: 15px; }
+  .checkout { width: 100%; }
+  footer div { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  footer a { margin: 0 6px; }
+}
+@media (max-width: 575.98px) {
+  .buttons .btn { width: 100%; text-align: center; }
+  .search-row { width: 100%; }
+  .search, .search-btn { height: 54px; }
+  .products, .cards, .vets, .services { grid-template-columns: 1fr !important; }
+  .p-img { height: 210px; }
+  .photo { height: 230px; }
+  .pet { padding: 18px; }
+  .pet-icon { width: 70px; height: 70px; font-size: 38px; flex: 0 0 70px; }
+  .page h1, .top h1 { font-size: 32px; }
+}
+
+/* Kartalar orasini ochish (Bootstrap col ziddiyati bartaraf etilgan) — asl 3 ustunli dizayn saqlandi */
+.products.row{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:25px!important}
+.products.row>.product{width:100%!important;max-width:100%!important;padding:0!important;margin:0!important}
+@media(max-width:900px){.products.row{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:600px){.products.row{grid-template-columns:1fr!important}}
+
+/* Filtr bo'limi ustiga chiqib ketishini tuzatish + kartalarni sal kichraytirish */
+.products.row{margin-top:28px!important}
+.p-img{height:200px!important}
+.fake-img{font-size:80px!important}
+.p-body{padding:16px!important}
+.p-body h2{font-size:17px!important;margin:10px 0 5px!important}
+.p-body p{font-size:14px!important}
+.p-body b{font-size:18px!important}
+.cart{padding:9px 14px!important;font-size:14px!important}
+@media(max-width:700px){.p-img{height:180px!important}}
+
+/* Mobil hamburger menyu (CSS-only, JS kerak emas) */
+.nav-toggle{display:none}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;cursor:pointer;z-index:20}
+.hamburger span{display:block;width:24px;height:3px;background:#111329;border-radius:2px;transition:.25s}
+.nav-toggle:checked ~ .hamburger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-toggle:checked ~ .hamburger span:nth-child(2){opacity:0}
+.nav-toggle:checked ~ .hamburger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:700px){
+  .hamburger{display:flex}
+  .navbar nav{display:flex!important;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:#fff;padding:10px 20px 18px;gap:2px;border-bottom:1px solid #eee;box-shadow:0 12px 20px #00000014;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:.25s ease}
+  .navbar nav a{padding:14px 10px;border-radius:12px}
+  .nav-toggle:checked ~ nav{max-height:400px;opacity:1;pointer-events:auto}
+}
+
+
+/* Navbar o'ng tomondagi belgilar (bell/savat/avatar) orasini kengaytirish, ustma-ust tushmasligi uchun */
+.nav-actions{gap:22px!important}
+.nav-actions>*{flex-shrink:0!important}
+.icon,.nav-icon{width:40px;height:40px;display:inline-flex!important;align-items:center;justify-content:center;border:0!important;outline:none!important;background:transparent!important}
+.avatar{flex-shrink:0!important;margin-left:2px}
+
+/* Header ichki qismini boshqa sahifalardagi markazlashtirilgan konteyner kengligiga moslashtirish */
+.navbar{padding-left:max(32px,calc((100% - 1320px)/2))!important;padding-right:max(32px,calc((100% - 1320px)/2))!important;box-sizing:border-box!important}
+@media(max-width:700px){.navbar{padding-left:15px!important;padding-right:15px!important}}
+
+/* Sahifa kontentini (top, filter, mahsulotlar/kartalar bo'limi) header bilan bir xil konteyner kengligiga moslashtirish */
+.container-fluid{padding-left:max(32px,calc((100% - 1320px)/2))!important;padding-right:max(32px,calc((100% - 1320px)/2))!important;box-sizing:border-box!important}
+@media(max-width:700px){.container-fluid{padding-left:15px!important;padding-right:15px!important}}
+
+/* Barcha <button> elementlaridan brauzer standart chegarasini butunlay olib tashlash */
+button{border:0!important;outline:0!important;-webkit-appearance:none;appearance:none}
+button:focus{outline:0!important;box-shadow:none!important}
+.icon,.nav-icon{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important}

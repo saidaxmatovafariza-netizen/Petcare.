@@ -1,0 +1,8 @@
+.detail-page {
+  padding: 40px 5vw;
+
+  .detail-card {
+    @include card;
+    padding: 30px;
+  }
+}

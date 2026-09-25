@@ -1,0 +1,104 @@
+<!doctype html><html lang="uz"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profil — PetCare</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="shop.css">
+<style>
+.profile{max-width:960px;margin:auto;padding:0 18px 60px}
+.cover{height:150px;border-radius:26px;background:linear-gradient(110deg,#ff8a6b,#ff674c 55%,#ff9f6e);margin-top:20px;position:relative}
+.profile-card{background:#fff;border:1px solid #eee;border-radius:25px;padding:30px;box-shadow:0 15px 35px #0000000d;margin-top:-70px;position:relative}
+.pc-top{display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap}
+.avatar-wrap{position:relative;flex-shrink:0}
+.big-avatar{width:120px;height:120px;border-radius:50%;background:#ff704f;color:#fff;display:grid;place-items:center;font-size:38px;font-weight:900;border:5px solid #fff;box-shadow:0 8px 18px #0002}
+.cam-badge{position:absolute;right:2px;bottom:2px;width:34px;height:34px;border-radius:50%;background:#111329;color:#fff;display:grid;place-items:center;font-size:14px;border:3px solid #fff}
+.pc-name{flex:1;min-width:200px;padding-bottom:6px}
+.pc-name h2{font-size:26px;margin-bottom:4px}
+.subtitle{color:#8b94a7;font-weight:700}
+.edit-btn{background:#fff;border:1px solid #e2e5eb;color:#333c4d;padding:12px 22px;border-radius:16px;font-weight:800;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.edit-btn:hover{background:#ffe7e2;border-color:#ffcfc4;color:#ff624a}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.stat-box{background:#fff8f6;border-radius:18px;padding:18px;text-align:center}
+.stat-box i{font-size:20px;color:#ff674c;margin-bottom:6px;display:block}
+.stat-box b{font-size:22px;display:block}
+.stat-box span{color:#7a8496;font-size:13px;font-weight:700}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:24px}
+.info div{background:#fff8f6;border-radius:15px;padding:16px 18px;display:flex;align-items:center;gap:14px}
+.info div i{width:42px;height:42px;border-radius:12px;background:#fff;color:#ff674c;display:grid;place-items:center;font-size:17px;flex-shrink:0}
+.info small{color:#7a8496;display:block}
+.info b{display:block;margin-top:2px}
+.section-title{font-size:19px;font-weight:900;margin:34px 0 16px}
+.pets-strip{display:flex;gap:14px;flex-wrap:wrap}
+.pet-chip{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #eee;border-radius:18px;padding:10px 18px 10px 10px}
+.pet-chip .ph{width:44px;height:44px;border-radius:50%;background:#eef1f6;display:grid;place-items:center;font-size:20px;color:#ff674c}
+.pet-chip b{display:block;font-size:15px}
+.pet-chip span{color:#8b94a7;font-size:12.5px}
+.quick-links{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.ql{background:#fff;border:1px solid #eee;border-radius:18px;padding:20px 14px;text-align:center;color:#333c4d;font-weight:800;transition:.2s}
+.ql:hover{transform:translateY(-3px);border-color:#ffcfc4;background:#fff8f6}
+.ql i{display:block;font-size:22px;margin-bottom:8px;color:#ff674c}
+.ql.danger i,.ql.danger{color:#e5484d}
+@media(max-width:650px){
+  .profile-card{grid-template-columns:1fr}
+  .info{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .quick-links{grid-template-columns:1fr 1fr}
+  .pc-top{align-items:center;text-align:center;flex-direction:column}
+  .edit-btn{margin:0 auto}
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head><body>
+<header class="navbar">
+<a class="logo" href="index.html"><i class="fa-solid fa-paw" aria-hidden="true"></i> <span>PetCare</span></a>
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true"><label for="nav-toggle" class="hamburger" aria-label="Menyu"><span></span><span></span><span></span></label>
+<nav><a href="index.html">Bosh sahifa</a><a href="vets.html">Veterinarlar</a><a href="shop.html">Do'kon</a><a href="pets.html">Hayvonlarim</a></nav>
+<a class="avatar" href="profile.html">AK</a>
+</header>
+
+<section class="top container-fluid">
+<div class="crumb"><a href="index.html">Bosh sahifa</a><span>›</span><b>Profil</b></div>
+<h1>Mening profilim</h1>
+</section>
+
+<main class="profile container">
+  <div class="cover"></div>
+  <div class="profile-card">
+    <div class="pc-top">
+      <div class="avatar-wrap">
+        <div class="big-avatar">AK</div>
+        <div class="cam-badge"><i class="fa-solid fa-camera"></i></div>
+      </div>
+      <div class="pc-name">
+        <h2>Aziza Karimova</h2>
+        <p class="subtitle">PetCare foydalanuvchisi &nbsp;•&nbsp; 2024-yildan beri</p>
+      </div>
+      <a href="#" class="edit-btn"><i class="fa-solid fa-pen"></i> Tahrirlash</a>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box"><i class="fa-solid fa-paw"></i><b>2</b><span>Hayvonlarim</span></div>
+      <div class="stat-box"><i class="fa-solid fa-bag-shopping"></i><b>7</b><span>Buyurtmalar</span></div>
+      <div class="stat-box"><i class="fa-solid fa-heart"></i><b>4</b><span>Sevimlilar</span></div>
+    </div>
+
+    <div class="info">
+      <div><i class="fa-solid fa-phone"></i><div><small>Telefon</small><b>+998 90 000 00 00</b></div></div>
+      <div><i class="fa-solid fa-envelope"></i><div><small>Email</small><b>aziza.karimova@mail.com</b></div></div>
+      <div><i class="fa-solid fa-location-dot"></i><div><small>Shahar</small><b>Toshkent</b></div></div>
+      <div><i class="fa-solid fa-house"></i><div><small>Manzil</small><b>Chilonzor tumani</b></div></div>
+    </div>
+
+    <div class="section-title">Mening hayvonlarim</div>
+    <div class="pets-strip">
+      <div class="pet-chip"><div class="ph"><i class="fa-solid fa-dog"></i></div><div><b>Rex</b><span>Nemis cho'poni, 3 yosh</span></div></div>
+      <div class="pet-chip"><div class="ph"><i class="fa-solid fa-cat"></i></div><div><b>Milo</b><span>Britaniya mushugi, 1 yosh</span></div></div>
+      <a href="pets.html" class="pet-chip" style="color:#ff624a"><div class="ph"><i class="fa-solid fa-plus"></i></div><div><b>Qo'shish</b><span>Yangi hayvon</span></div></a>
+    </div>
+
+    <div class="section-title">Tezkor havolalar</div>
+    <div class="quick-links">
+      <a href="cart.html" class="ql"><i class="fa-solid fa-bag-shopping"></i>Buyurtmalarim</a>
+      <a href="vets.html" class="ql"><i class="fa-solid fa-heart"></i>Sevimlilar</a>
+      <a href="pets.html" class="ql"><i class="fa-solid fa-paw"></i>Hayvonlarim</a>
+      <a href="#" class="ql danger"><i class="fa-solid fa-right-from-bracket"></i>Chiqish</a>
+    </div>
+  </div>
+</main>
+
+</body></html>
